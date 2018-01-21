@@ -26,13 +26,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         dbHelper = new BookDbHelper(this);
-
         // test two dummies data
         Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.harry_potter_img);
         byte[] byteArray = getBytes(bm);
         insertBook("Harry Potter", 20, 7, byteArray, "supplier1", "supplier1@abc.com", 123456789);
         insertBook("The hobbet", 15, 8, null, "supplier2", "supplier2@abc.com", 987654321);
-
         displayDatabaseInfo();
     }
 
